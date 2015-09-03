@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>TnT Genome Theme -- transcript track</title>
+<head>
+    <style media="screen">
+        body {
+            margin: 1em auto 4em auto;
+            width: 960px;
+        }
+    </style>
+</head>
+
+<div id="body">
+    <h2>Integration between TnT Genome and Uniprot features viewer</h2>
+
+    <!-- D3 -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- Feature Viewer -->
+    <link rel="stylesheet" href="proteinFeatureViewer/fontello.css"/>
+    <link rel="stylesheet" href="proteinFeatureViewer/main.css"/>
+    <script src="proteinFeatureViewer/featuresviewer.js"></script>
+
+    <!-- GenomeBrowser -->
+    <link rel="stylesheet" href="genomeBrowser/index.css"/>
+    <script src="genomeBrowser/tnt.genome.js"></script>
+    <script src="theme.js"></script>
+
+    <h3>Genome Browser</h3>
+    <div id="genomeBrowser"></div>
+    <h3>Protein Features</h3>
+    <p id="featuresHeader">Click on a gene or transcript above to fetch protein information</p>
+    <div id="featuresViewer"></div>
+
+    <script>
+        var viewer = theme();
+        var genomeContainer = document.getElementById("genomeBrowser");
+        var featuresContainer = document.getElementById("featuresViewer");
+        var featuresHeader = document.getElementById("featuresHeader");
+        viewer(genomeContainer, featuresContainer, featuresHeader);
+    </script>
+
+</div>

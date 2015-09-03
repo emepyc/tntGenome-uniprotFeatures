@@ -1,0 +1,6 @@
+tntGenome + uniprot Features integration
+-----------------------------------------
+
+This is an example of integration between [tnt.genome](https://github.com/emepyc/tnt.genome) and the [uniprot feature viewer](https://github.com/ebi-uniprot/biojs-vis-proteinFeaturesViewer).
+
+To see the example just open index.html in your browser
